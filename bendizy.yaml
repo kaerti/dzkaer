@@ -254,9 +254,9 @@ proxy-groups:
     
   - {name: 备用AI, <<: *All, filter: "^(?=.*(IEPLai)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/diyanchi.png"}
     
-  - {name: 低倍率, <<: *All, type: load-balance, strategy: round-robin, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+  - {name: 低倍率, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
 
-  - {name: HKEmby, <<: *All, type: load-balance, strategy: round-robin, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/emby.png"}
+  - {name: HKEmby, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/emby.png"}
 
 #  - {name: 高级节点, <<: *All, filter: "^(?=.*(iepl|IEPL|(?<!\\.)[[1-9][0-9]*x])).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
 
