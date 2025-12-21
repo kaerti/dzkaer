@@ -406,6 +406,6 @@ rules:
   - Rule-Set,proxy,代理
   - Dst-Port,80,漏网之鱼
   - Dst-Port,443,漏网之鱼
-  - MATCH,🌎 全球直连
+  - MATCH,漏网之鱼
 
 # —————————
