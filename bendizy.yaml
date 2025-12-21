@@ -372,10 +372,7 @@ rules:
   - Rule-Set,种子下载,🌎 全球直连 
   - Rule-Set,GitHub加速,香港
 #  - Rule-Set,private,🌎 全球直连
-  - Rule-Set,privateip,🌎 全球直连,no-resolve
-  - Rule-Set,fakeip-filter,🌎 全球直连
-  - Rule-Set,steam_cn,🌎 全球直连
-  - Rule-Set,game_cn,🌎 全球直连 
+  - OR,((Rule-Set,privateip,no-resolve),(Rule-Set,fakeip-filter),(Rule-Set,steam_cn),(Rule-Set,game_cn)),🌎 全球直连
   - Rule-Set,steam,steam
   - Rule-Set,game,steam
   - Rule-Set,gemini,GPT
@@ -403,8 +400,6 @@ rules:
   - Rule-Set,cnip,🌎 全球直连,no-resolve 
 #  - Rule-Set,tld-!cn,代理
   - Rule-Set,proxy,代理
-  - Dst-Port,80,漏网之鱼
-  - Dst-Port,443,漏网之鱼
   - MATCH,漏网之鱼
 
 # —————————
