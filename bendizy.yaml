@@ -6,7 +6,7 @@ redir-port: 9797
 tproxy-port: 9898
 mode: Rule
 allow-lan: true
-disable-keep-alive: true
+#disable-keep-alive: true
 experimental:
   http-headers:
     request:
@@ -38,10 +38,8 @@ p: &p
   health-check:
     enable: true
     url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    expected-status: 204
-    tolerance: 100
-    ipv6: true
+    interval: 600
+    tolerance: 150
   proxy: 订阅更新
   header: # 如遇订阅加载不出来请切换ua
       User-Agent:  # 使用注释法由上到下 默认使用第一个
@@ -90,6 +88,7 @@ sniffer:
       override-destination: true
     TLS:
       ports: [443, 5228, 8443]
+      override-destination: true
     QUIC:
       ports: [443, 8443]
   force-domain:
@@ -102,7 +101,7 @@ sniffer:
 tun:
   enable: true
   device: meta
-  stack: mixed
+  stack: system
   dns-hijack: [any:53, tcp://any:53]
   udp-timeout: 300
   auto-route: true
@@ -130,7 +129,7 @@ tun:
 dns:
   enable: true
   cache-algorithm: arc
-  ipv6: false
+  ipv6: true
   listen: 0.0.0.0:1053
   respect-rules: true
   enhanced-mode: fake-ip
@@ -159,11 +158,11 @@ dns:
     - https://223.6.6.6:443/dns-query#🌎 全球直连&h3=false
   nameserver:
     # Google
-    - https://8.8.8.8:443/dns-query#DNS解析&h3=true
-    - https://8.8.4.4:443/dns-query#DNS解析&h3=true
+    - https://8.8.8.8:443/dns-query#DNS解析&h3=false
+    - https://8.8.4.4:443/dns-query#DNS解析&h3=false
     # Cloudflare
-    - https://1.1.1.1:443/dns-query#DNS解析&h3=true
-    - https://1.0.0.1:443/dns-query#DNS解析&h3=true
+    - https://1.1.1.1:443/dns-query#DNS解析&h3=false
+    - https://1.0.0.1:443/dns-query#DNS解析&h3=false
 #------------------------------------------------------------------------------
 proxies:
   - {name: ⛔️ 无网, type: reject}
