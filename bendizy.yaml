@@ -17,7 +17,7 @@ experimental:
 unified-delay: true
 tcp-concurrent: true
 log-level: silent
-find-process-mode: always
+find-process-mode: off
 global-client-fingerprint: random
 external-controller: 0.0.0.0:9090 # 切勿修改端口会影响状态栏磁贴
 external-ui: ./dashboard
