@@ -152,7 +152,7 @@ dns:
     - https://223.5.5.5:443/dns-query#🌎 全球直连&h3=false
     - https://223.6.6.6:443/dns-query#🌎 全球直连&h3=false
   nameserver-policy:
-    "Rule-Set:cn,tld-cn,种子下载,game_cn,steam_cn,private":
+    "Rule-Set:cn,种子下载,game_cn,steam_cn":
     - https://1.12.12.12:443/dns-query#🌎 全球直连&h3=false
     - https://120.53.53.53:443/dns-query#🌎 全球直连&h3=false
     - https://223.5.5.5:443/dns-query#🌎 全球直连&h3=false
@@ -285,7 +285,7 @@ rule-providers:
 
   cn: {<<: *Domain, path: ./rules/cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
   
-  tld-cn: {<<: *Domain, path: ./rules/tld-cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tld-cn.mrs"}
+#  tld-cn: {<<: *Domain, path: ./rules/tld-cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tld
 
   google: {<<: *Domain, path: ./rules/google.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/google.mrs"}
   
@@ -295,7 +295,7 @@ rule-providers:
   
   fakeip-filter: {<<: *Domain, path: ./rules/fakeip-filter.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"}
   
-  private: {<<: *Domain, path: ./rules/private.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.mrs"}
+#  private: {<<: *Domain, path: ./rules/private.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/pri
 
   OpenAI: {<<: *Domain, path: ./rules/openai.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
 
@@ -349,13 +349,13 @@ rule-providers:
     
   telegram: {<<: *IPCIDR, path: ./rules/telegramip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"}
   
-  googleip: {<<: *IPCIDR, path: ./rules/google.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
+#  googleip: {googleip: {<<: *IPCIDR, path: ./rules/google.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/
     
   cnip: {<<: *IPCIDR, path: ./rules/cnip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.mrs"}
 
 #  cloudflareip: {<<: *IPCIDR, path: ./rules/cloudflare.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cloudflare.mrs"}
 
-  twitterip: {<<: *IPCIDR, path: ./rules/twitter.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/twitter.mrs"}
+#  twitterip: {<<: *IPCIDR, path: ./rules/twitter.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta
 
 #————————————————yaml————————————————————————————————
 
@@ -372,7 +372,7 @@ rules:
   - Rule-Set,app定位,app定位
   - Rule-Set,种子下载,🌎 全球直连 
   - Rule-Set,GitHub加速,香港
-  - Rule-Set,private,🌎 全球直连
+#  - Rule-Set,private,🌎 全球直连
   - Rule-Set,privateip,🌎 全球直连,no-resolve
   - Rule-Set,fakeip-filter,🌎 全球直连
   - Rule-Set,steam_cn,🌎 全球直连
@@ -386,7 +386,7 @@ rules:
   - Domain-Suffix,iturrit.com,电报
   - Rule-Set,telegram,电报,no-resolve
   - Rule-Set,twitter,电报
-  - Rule-Set,twitterip,电报,no-resolve  
+ # - Rule-Set,twitterip,电报,no-resolve  
   - Rule-Set,gitHub,GitHub
   - Rule-Set,Discord,Discord
   - Rule-Set,TikTok,TikTok
@@ -398,15 +398,14 @@ rules:
   - Rule-Set,Microsoft,微软
   - Rule-Set,Binance,新加坡
   - Rule-Set,google,Google
-  - Rule-Set,googleip,Google,no-resolve
-  - Rule-Set,tld-cn,🌎 全球直连
+#  - Rule-Set,googleip,Google,no-resolve
+#  - Rule-Set,tld-cn,🌎 全球直连
   - Rule-Set,cn,🌎 全球直连
-  - Rule-Set,tld-!cn,代理
-  - Rule-Set,proxy,代理
   - Rule-Set,cnip,🌎 全球直连,no-resolve 
+#  - Rule-Set,tld-!cn,代理
+  - Rule-Set,proxy,代理
   - Dst-Port,80,漏网之鱼
   - Dst-Port,443,漏网之鱼
   - MATCH,🌎 全球直连
-
 
 # —————————
