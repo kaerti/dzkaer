@@ -281,6 +281,8 @@ rule-providers:
   反诈: {<<: *RuleDefault, path: ./rules/反诈.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/fanzha.list"}
 
   cloudflaredns: {<<: *RuleDefault, path: ./rules/cloudflaredns.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/cloudflaredns.list"}
+
+  广告: {<<: *RuleDefault, path: ./rules/mihomo.mrs, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list"}
 #——————————————————DOMAIN————————————————————————
 
   cn: {<<: *Domain, path: ./rules/cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
@@ -337,8 +339,6 @@ rule-providers:
 
 
 #  pikpak: {<<: *Domain, path: ./rules/pikpak.mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/pikpak.mrs"}
-
-  广告: {<<: *Domain, path: ./rules/mihomo.mrs, url: "https://anti-ad.net/mihomo.mrs"}
 
   speed测速: {<<: *Domain, path: ./rules/speedtest.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/speedtest.mrs"}
   
