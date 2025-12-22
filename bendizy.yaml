@@ -248,6 +248,8 @@ proxy-groups:
   - {name: 澳门, <<: *All, filter: "^(?=.*(澳门)).*$", icon: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/icon/%E5%A8%B1%E4%B9%90.svg"}
   
   - {name: 低倍, <<: *All, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+
+   - {name: 备用, <<: *All, filter: "^(?=.*(合租)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
     
   - {name: 备用AI, <<: *All, filter: "^(?=.*(IEPLai)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/diyanchi.png"}
 
