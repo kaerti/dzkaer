@@ -171,11 +171,11 @@ proxies:
 
 proxy_groups: &proxy_groups {type: select, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 香港负载均衡, 低倍, 备用, 节点选择]}
 
-qtemby: &qtemby {type: fallback, interval: 300, proxies: [低倍, 低倍负载均衡, 备用, 🌎 全球直连, 节点选择]}
+qtemby: &qtemby {type: select, proxies: [低倍, 低倍负载均衡, 备用, 🌎 全球直连, 节点选择]}
 
 proxy_dns: &proxy_dns {type: fallback, interval: 300, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 低倍, 备用, 节点选择, 🌎 全球直连]}
 
-AIBY: &AIBY {type: fallback, interval: 300, proxies: [台湾, 日本, 美国, 新加坡, 备用AI, 备用, 节点选择]}
+AIBY: &AIBY {type: select, proxies: [台湾, 日本, 美国, 新加坡, 备用AI, 备用, 节点选择]}
 
 CNproxy_groups: &CNproxy_groups {type: select, proxies: [🌎 全球直连, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 节点选择]}
 # —————————
