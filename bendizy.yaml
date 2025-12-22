@@ -282,7 +282,6 @@ rule-providers:
 
   cloudflaredns: {<<: *RuleDefault, path: ./rules/cloudflaredns.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/cloudflaredns.list"}
 
-  广告: {<<: *RuleDefault, path: ./rules/mihomo.mrs, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list"}
 #——————————————————DOMAIN————————————————————————
 
   cn: {<<: *Domain, path: ./rules/cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
@@ -343,6 +342,8 @@ rule-providers:
   speed测速: {<<: *Domain, path: ./rules/speedtest.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/speedtest.mrs"}
   
   gemini: {<<: *Domain, path: ./rules/gemini.mrs, url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/ai.mrs"}
+
+  广告: {<<: *Domain, path: ./rules/mihomo.mrs, url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"}
 
 #————————————————IPCIDR——————————————————————————————  
   privateip: {<<: *IPCIDR, path: ./rules/privateip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"}
