@@ -171,7 +171,7 @@ proxies:
 
 proxy_groups: &proxy_groups {type: select, proxies: [香港, 香港负载均衡, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 低倍率, 备用, 节点选择, 🌎 全球直连]}
 
-qtemby: &qtemby {type: fallback, interval: 300, proxies: [低倍率, 备用, 🌎 全球直连, 节点选择]}
+qtemby: &qtemby {type: fallback, interval: 300, proxies: [低倍, 低倍负载均衡, 备用, 🌎 全球直连, 节点选择]}
 
 proxy_dns: &proxy_dns {type: fallback, interval: 300, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 低倍率, 备用, 节点选择, 🌎 全球直连]}
 
@@ -234,9 +234,7 @@ proxy-groups:
 #----------------------------------------------
 
   - {name: 香港, <<: *All, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
-  
-  - {name: 香港负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
-      
+        
   - {name: 台湾, <<: *All, type: fallback, interval: 300, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
     
   - {name: 棒子, <<: *All, filter: "^(?=.*(韩国|首尔|韩)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bangzi.png"}
@@ -249,17 +247,20 @@ proxy-groups:
     
   - {name: 澳门, <<: *All, filter: "^(?=.*(澳门)).*$", icon: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/icon/%E5%A8%B1%E4%B9%90.svg"}
   
-  - {name: 备用, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(合租)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
+  - {name: 低倍, <<: *All, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
     
   - {name: 备用AI, <<: *All, filter: "^(?=.*(IEPLai)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/diyanchi.png"}
-    
-  - {name: 低倍率, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
 
-  - {name: HKEmby, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/emby.png"}
+  - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
+  
+  - {name: 香港负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+
+  - {name: 低倍负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+
+  - {name: 备用负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(合租)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
 
 #  - {name: 高级节点, <<: *All, filter: "^(?=.*(iepl|IEPL|(?<!\\.)[[1-9][0-9]*x])).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
 
-  - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
 
 #规则集
 rule-anchor:
@@ -377,7 +378,6 @@ rules:
   - Rule-Set,game,steam
   - Rule-Set,gemini,GPT
   - Rule-Set,OpenAI,GPT
-  - Domain-Suffix,e.beupisp.com,HKEmby
   - Rule-Set,emby,emby
   - Domain-Suffix,iturrit.com,电报
   - Rule-Set,telegram,电报,no-resolve
