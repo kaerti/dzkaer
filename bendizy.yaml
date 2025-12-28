@@ -88,7 +88,6 @@ sniffer:
       override-destination: true
     TLS:
       ports: [443, 5228, 8443]
-      override-destination: true
     QUIC:
       ports: [443, 8443]
   force-domain:
@@ -135,14 +134,14 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 192.18.0.1/16
   fake-ip-filter:
-    # - Rule-Set:cn,fakeip-filter,tld-cn
-    # - "+.tmga.qq.com"
-    # - "+.cg.qq.com"
-    # - "+.tencent.com"
-    # - "+.igamecj.com"
-    # - "+.mtalk.google.com"
-    # - "eleparamtool.saelinzi.com"
-    # - "digitparamtool.saelinzi.com"
+    - Rule-Set:fakeip-filter
+    - "+.tmga.qq.com"
+    - "+.cg.qq.com"
+    - "+.tencent.com"
+    - "+.igamecj.com"
+    - "+.mtalk.google.com"
+    - "eleparamtool.saelinzi.com"
+    - "digitparamtool.saelinzi.com"
   direct-nameserver:
     - 223.5.5.5#🌎 全球直连&h3=false
   proxy-server-nameserver:
