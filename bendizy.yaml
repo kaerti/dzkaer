@@ -373,7 +373,7 @@ rules:
   - Rule-Set,种子下载,🌎 全球直连 
   - Rule-Set,GitHub加速,香港
 #  - Rule-Set,private,🌎 全球直连
-  - OR,((Rule-Set,privateip,no-resolve),(Rule-Set,fakeip-filter),(Rule-Set,steam_cn),(Rule-Set,game_cn)),🌎 全球直连
+  - OR,((Rule-Set,privateip,no-resolve),(Rule-Set,steam_cn),(Rule-Set,game_cn)),🌎 全球直连
   - Rule-Set,steam,steam
   - Rule-Set,game,steam
   - Rule-Set,gemini,GPT
