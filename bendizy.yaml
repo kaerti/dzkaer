@@ -168,7 +168,7 @@ proxies:
   - {name: 🌎 全球直连, type: direct, udp: true}
   - {name: 🌐 DNS_Hijack, type: dns}
 
-proxy_groups: &proxy_groups {type: select, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 香港负载均衡, 低倍, 备用, 节点选择]}
+proxy_groups: &proxy_groups {type: select, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 香港负载均衡, 低倍, 备用, 节点选择, 🌎 全球直连]}
 
 qtemby: &qtemby {type: select, proxies: [低倍, 低倍负载均衡, 备用, 🌎 全球直连, 节点选择]}
 
