@@ -264,6 +264,7 @@ rule-anchor:
   IPCIDR: &IPCIDR {type: http, behavior: ipcidr, format: mrs, interval: 86400}
   Domain: &Domain {type: http, behavior: domain, format: mrs, interval: 86400}
   yaml: &yaml {type: http, behavior: domain, format: yaml, interval: 86400}
+  DNSIP: &DNSIP {type: http, behavior: ipcidr, format: text, interval: 86400}
   
 rule-providers:    
   WebRTC_端/域: {<<: *RuleDefault, path: ./rules/WebRTC.list, url: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/rules/WebRTC.list"}
@@ -278,7 +279,7 @@ rule-providers:
   
   反诈: {<<: *RuleDefault, path: ./rules/反诈.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/fanzha.list"}
 
-  cloudflaredns: {<<: *RuleDefault, path: ./rules/cloudflaredns.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/cloudflaredns.list"}
+  GWdns: {<<: *DNSIP, path: ./rules/cloudflaredns.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/cloudflaredns.list"}
 
 #——————————————————DOMAIN————————————————————————
 
@@ -361,7 +362,7 @@ rule-providers:
 rules:
   - Dst-Port,53,🌐 DNS_Hijack
   - Dst-Port,853,DNS解析
-  - Rule-Set,cloudflaredns,DNS解析,no-resolve  
+  - Rule-Set,GWdns,DNS解析,no-resolve  
   - Dst-Port,5228,GoogleFCM
   - Rule-Set,GoogleFCM,GoogleFCM
   - Rule-Set,WebRTC_端/域,广告拦截
