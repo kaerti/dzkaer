@@ -135,6 +135,8 @@ dns:
   fake-ip-range: 192.18.0.1/16
   fake-ip-filter:
     - Rule-Set:fakeip-filter
+    - Rule-Set:cn
+    - Rule-Set:GoogleFCM
     - "+.tmga.qq.com"
     - "+.cg.qq.com"
     - "+.tencent.com"
@@ -142,8 +144,6 @@ dns:
     - "+.mtalk.google.com"
     - "eleparamtool.saelinzi.com"
     - "digitparamtool.saelinzi.com"
-  direct-nameserver:
-    - 223.5.5.5#🌎 全球直连&h3=false
   proxy-server-nameserver:
     - https://1.12.12.12:443/dns-query#🌎 全球直连&h3=false
     - https://120.53.53.53:443/dns-query#🌎 全球直连&h3=false
@@ -269,6 +269,8 @@ rule-anchor:
   yaml: &yaml {type: http, behavior: domain, format: yaml, interval: 86400}
   
 rule-providers:    
+  WebRTC_端/域: {<<: *RuleDefault, path: ./rules/WebRTC.list, url: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/rules/WebRTC.list"}
+  
   Direct: {<<: *RuleDefault, path: ./rules/Direct.list, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.list"}
        
   GitHub加速: {<<: *RuleDefault, path: ./rules/github加速.list, url: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/rule/github%E5%8A%A0%E9%80%9F.list"}
@@ -365,6 +367,7 @@ rules:
   - Rule-Set,cloudflaredns,DNS解析,no-resolve  
   - Dst-Port,5228,GoogleFCM
   - Rule-Set,GoogleFCM,GoogleFCM
+  - Rule-Set,WebRTC_端/域,广告拦截
   - Rule-Set,反诈,广告拦截
 #  - Rule-Set,cloudflare,DNS解析
   - Rule-Set,广告,广告拦截
