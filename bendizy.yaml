@@ -263,7 +263,6 @@ rule-anchor:
   RuleDefault: &RuleDefault {type: http, behavior: classical, format: text, interval: 86400}  
   IPCIDR: &IPCIDR {type: http, behavior: ipcidr, format: mrs, interval: 86400}
   Domain: &Domain {type: http, behavior: domain, format: mrs, interval: 86400}
-  yaml: &yaml {type: http, behavior: domain, format: yaml, interval: 86400}
   DNSIP: &DNSIP {type: http, behavior: ipcidr, format: text, interval: 86400}
   
 rule-providers:    
