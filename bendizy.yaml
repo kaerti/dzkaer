@@ -165,7 +165,7 @@ proxies:
   - {name: 🌎 全球直连, type: direct, udp: true}
   - {name: 🌐 DNS_Hijack, type: dns}
 
-proxy_groups: &proxy_groups {type: select, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 香港负载均衡, 低倍, 备用, 节点选择, 🌎 全球直连]}
+proxy_groups: &proxy_groups {type: select, proxies: [香港, 澳门, 台湾, 新加坡, 日本, 美国, 棒子, 香港负载均衡, 新加坡负载均衡, 低倍, 备用, 节点选择, 🌎 全球直连]}
 
 qtemby: &qtemby {type: select, proxies: [低倍, 低倍负载均衡, 备用, 🌎 全球直连, 节点选择]}
 
@@ -248,6 +248,8 @@ proxy-groups:
   - {name: 备用AI, <<: *All, filter: "^(?=.*(IEPLai)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/diyanchi.png"}
 
   - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
+
+  - {name: 香港负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
   
   - {name: 新加坡负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
 
