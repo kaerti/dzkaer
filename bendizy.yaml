@@ -51,10 +51,14 @@ p: &p
 # —————————
 
 # 订阅地址相关
-#A: &A
-#  use:
-#  - BE
- 
+A: &A
+  use:
+  - BE
+  health-check:
+    enable: true
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+
 All: &All
   type: url-test
   health-check:
@@ -229,7 +233,7 @@ proxy-groups:
 
   - {name: 香港, <<: *All, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
         
-  - {name: 台湾, <<: *All, type: fallback, interval: 300, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
+  - {name: 台湾, <<: *A, type: fallback, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
     
   - {name: 棒子, <<: *All, filter: "^(?=.*(韩国|首尔|韩)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bangzi.png"}
     
@@ -249,13 +253,13 @@ proxy-groups:
 
   - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
 
-  - {name: 香港负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 香港负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
   
-  - {name: 新加坡负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 新加坡负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
 
-  - {name: 低倍负载均衡, <<: *All, type: load-balance, strategy: consistent-hashing, interval: 300, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+  - {name: 低倍负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
 
-#  - {name: 高级节点, <<: *All, filter: "^(?=.*(iepl|IEPL|(?<!\\.)[[1-9][0-9]*x])).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
+#  - {name: 高级节点, <<: *A, filter: "^(?=.*(iepl|IEPL|(?<!\\.)[[1-9][0-9]*x])).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
 
 
 #规则集
