@@ -6,7 +6,7 @@ redir-port: 9797
 tproxy-port: 9898
 mode: Rule
 allow-lan: true
-#disable-keep-alive: true
+disable-keep-alive: true
 experimental:
   http-headers:
     request:
@@ -18,7 +18,7 @@ unified-delay: true
 tcp-concurrent: true
 log-level: silent
 find-process-mode: off
-global-client-fingerprint: random
+global-client-fingerprint: chrome
 external-controller: 0.0.0.0:9090 # 切勿修改端口会影响状态栏磁贴
 external-ui: ./dashboard
 secret: "" # 面板访问密码，如在公网访问建议设置
