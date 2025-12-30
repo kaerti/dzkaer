@@ -56,6 +56,7 @@ p: &p
 #  - BE
  
 All: &All
+  type: url-test
   health-check:
     enable: true
     url: https://cp.cloudflare.com/generate_204
