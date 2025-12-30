@@ -265,10 +265,6 @@ rule-anchor:
 rule-providers:    
   WebRTC_端/域: {<<: *RuleDefault, path: ./rules/WebRTC.list, url: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/rules/WebRTC.list"}
   
-  Direct: {<<: *RuleDefault, path: ./rules/Direct.list, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.list"}
-       
-  GitHub加速: {<<: *RuleDefault, path: ./rules/github加速.list, url: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/rule/github%E5%8A%A0%E9%80%9F.list"}
-  
   app定位: {<<: *RuleDefault, path: ./rules/app定位.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/meapplocation.list"}
   
   emby: {<<: *RuleDefault, path: ./rules/emby.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/emby.list"}
@@ -282,8 +278,6 @@ rule-providers:
 #——————————————————DOMAIN————————————————————————
 
   cn: {<<: *Domain, path: ./rules/cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
-  
-#  tld-cn: {<<: *Domain, path: ./rules/tld-cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tld
 
   google: {<<: *Domain, path: ./rules/google.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/google.mrs"}
   
@@ -292,12 +286,8 @@ rule-providers:
   种子下载: {<<: *Domain, path: ./rules/category-public-tracker.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-public-tracker.mrs"}
   
   fakeip-filter: {<<: *Domain, path: ./rules/fakeip-filter.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"}
-  
-#  private: {<<: *Domain, path: ./rules/private.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/pri
 
   OpenAI: {<<: *Domain, path: ./rules/openai.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
-
-#  cloudflare: {<<: *Domain, path: ./rules/cloudflare.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cloudflare.mrs"}
 
   twitter: {<<: *Domain, path: ./rules/twitter.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitter.mrs"}
   
@@ -331,11 +321,6 @@ rule-providers:
 
   game_cn: {<<: *Domain, path: ./rules/category-games@cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-games@cn.mrs"}
 
-  tld-!cn: {<<: *Domain, path: ./rules/tld-!cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tld-!cn.mrs"}
-
-
-#  pikpak: {<<: *Domain, path: ./rules/pikpak.mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/pikpak.mrs"}
-
   speed测速: {<<: *Domain, path: ./rules/speedtest.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/speedtest.mrs"}
   
   gemini: {<<: *Domain, path: ./rules/gemini.mrs, url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/ai.mrs"}
@@ -351,29 +336,28 @@ rule-providers:
     
   cnip: {<<: *IPCIDR, path: ./rules/cnip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.mrs"}
 
-#  cloudflareip: {<<: *IPCIDR, path: ./rules/cloudflare.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cloudflare.mrs"}
-
 #  twitterip: {<<: *IPCIDR, path: ./rules/twitter.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta
 
 #————————————————yaml————————————————————————————————
 
 rules:
-  - Dst-Port,53,🌐 DNS_Hijack
-  - Dst-Port,853,DNS解析
   - Rule-Set,cndns,🌎 全球直连,no-resolve
   - Rule-Set,GWdns,DNS解析,no-resolve  
-  - Dst-Port,5228,GoogleFCM
-  - Rule-Set,GoogleFCM,GoogleFCM
+  - Dst-Port,53,🌐 DNS_Hijack
+  - Dst-Port,853,DNS解析
   - Rule-Set,WebRTC_端/域,广告拦截
   - Rule-Set,反诈,广告拦截
-#  - Rule-Set,cloudflare,DNS解析
   - Rule-Set,广告,广告拦截
+  - Rule-Set,GoogleFCM,GoogleFCM
   - Rule-Set,speed测速,speed测速
   - Rule-Set,app定位,app定位
-  - Rule-Set,种子下载,🌎 全球直连 
-  - Rule-Set,GitHub加速,香港
-#  - Rule-Set,private,🌎 全球直连
-  - OR,((Rule-Set,privateip,no-resolve),(Rule-Set,steam_cn),(Rule-Set,game_cn)),🌎 全球直连
+  - OR,((Rule-Set,种子下载),(Rule-Set,privateip,no-resolve),(Rule-Set,steam_cn),(Rule-Set,game_cn),),🌎 全球直连
+  - Rule-Set,Apple,Apple
+  - Rule-Set,Microsoft,微软
+  - Rule-Set,onedrive,微软
+  - Rule-Set,bing,bing
+  - Rule-Set,cn,🌎 全球直连
+  - Rule-Set,cnip,🌎 全球直连,no-resolve 
   - Rule-Set,steam,steam
   - Rule-Set,game,steam
   - Rule-Set,gemini,GPT
@@ -382,23 +366,13 @@ rules:
   - Domain-Suffix,iturrit.com,电报
   - Rule-Set,telegram,电报,no-resolve
   - Rule-Set,twitter,电报
- # - Rule-Set,twitterip,电报,no-resolve  
   - Rule-Set,gitHub,GitHub
   - Rule-Set,Discord,Discord
   - Rule-Set,TikTok,TikTok
   - Rule-Set,paypal,香港
   - Rule-Set,youTube,油管 
-  - Rule-Set,Apple,Apple
-  - Rule-Set,bing,bing
-  - Rule-Set,onedrive,微软
-  - Rule-Set,Microsoft,微软
   - Rule-Set,Binance,新加坡
   - Rule-Set,google,Google
-#  - Rule-Set,googleip,Google,no-resolve
-#  - Rule-Set,tld-cn,🌎 全球直连
-  - Rule-Set,cn,🌎 全球直连
-  - Rule-Set,cnip,🌎 全球直连,no-resolve 
-#  - Rule-Set,tld-!cn,代理
   - Rule-Set,proxy,代理
   - MATCH,漏网之鱼
 
