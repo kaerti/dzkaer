@@ -368,9 +368,9 @@ rules:
   - Rule-Set,paypal,香港
   - Rule-Set,youTube,油管 
   - Rule-Set,Binance,新加坡
+  - Rule-Set,bing,bing
   - Rule-Set,Microsoft,微软
   - Rule-Set,onedrive,微软
-  - Rule-Set,bing,bing
   - Rule-Set,google,Google
   - Rule-Set,proxy,代理
   - MATCH,漏网之鱼
