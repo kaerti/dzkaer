@@ -359,8 +359,6 @@ rules:
   - Rule-Set,app定位,app定位
   - OR,((Rule-Set,种子下载),(Rule-Set,privateip,no-resolve),(Rule-Set,steam_cn),(Rule-Set,game_cn),),🌎 全球直连
   - Rule-Set,Apple,Apple
-  - Rule-Set,cn,🌎 全球直连
-  - Rule-Set,cnip,🌎 全球直连,no-resolve 
   - Rule-Set,steam,steam
   - Rule-Set,game,steam
   - Rule-Set,gemini,GPT
@@ -379,6 +377,8 @@ rules:
   - Rule-Set,Microsoft,微软
   - Rule-Set,onedrive,微软
   - Rule-Set,google,Google
+  - Rule-Set,cn,🌎 全球直连
+  - Rule-Set,cnip,🌎 全球直连,no-resolve 
   - Rule-Set,proxy,代理
   - MATCH,漏网之鱼
 
