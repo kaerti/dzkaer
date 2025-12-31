@@ -212,7 +212,7 @@ proxy-groups:
     
   - {name: app定位, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dks.png"}
 
-  - {name: DNS解析, <<: *All, filter: "^(?=.*(香港|澳门|台湾|日本|韩国|新加坡)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dns.png"}
+  - {name: DNS解析, <<: *All, filter: "^(?=.*(香港|澳门|台湾|新加坡|IEPL)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dns.png"}
 
   - {name: steam, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/steam.png"}
 
