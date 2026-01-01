@@ -74,7 +74,7 @@ proxy-providers:
     override:
       additional-prefix: ""
     path: ./proxy_provider/BE.yaml
-    url: "http://127.0.0.1:3000/download/collection/%E9%9B%86%E5%90%88"
+    url: "http://127.0.0.1:3000/download/collection/jihe"
     
 profile: # ← 此函数位置请勿变动！此为模块更新时备份恢复订阅变量范围 ↑
   store-selected: true
@@ -180,7 +180,7 @@ CNproxy_groups: &CNproxy_groups {type: select, proxies: [🌎 全球直连, 香�
 proxy-groups:
   - {name: 电报, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/telegram.png"}
     
-  - {name: 订阅更新, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gengxin.png", proxies: [🌎 全球直连, 香港], type: url-test, health-check: {enable: true, url: "http://connect.rom.miui.com/generate_204", interval: 600, expected-status: 204, tolerance: 100}}
+  - {name: 订阅更新, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gengxin.png", proxies: [🌎 全球直连, 香港]}
   
   - {name: Apple, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/Apple.png"}
     
