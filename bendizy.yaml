@@ -233,7 +233,7 @@ proxy-groups:
 
   - {name: 香港, <<: *All, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
         
-  - {name: 台湾, <<: *A, type: fallback, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
+  - {name: 台湾, <<: *All, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
     
   - {name: 棒子, <<: *All, filter: "^(?=.*(韩国|首尔|韩)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bangzi.png"}
     
