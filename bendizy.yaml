@@ -180,7 +180,7 @@ CNproxy_groups: &CNproxy_groups {type: select, proxies: [🌎 全球直连, 香�
 proxy-groups:
   - {name: 电报, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/telegram.png"}
     
-  - {name: 订阅更新, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gengxin.png", proxies: [🌎 全球直连, 香港]}
+  - {name: 订阅更新, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gengxin.png", proxies: [🌎 全球直连, 节点选择]}
   
   - {name: Apple, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/Apple.png"}
     
