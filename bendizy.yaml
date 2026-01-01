@@ -253,11 +253,11 @@ proxy-groups:
 
   - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
 
-  - {name: 香港负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 香港负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, sticky-sessions: true, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
   
-  - {name: 新加坡负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 新加坡负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, sticky-sessions: true, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
 
-  - {name: 低倍负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+  - {name: 低倍负载均衡, <<: *A, type: load-balance, strategy: round-robin, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
 
 #  - {name: 高级节点, <<: *A, filter: "^(?=.*(iepl|IEPL|(?<!\\.)[[1-9][0-9]*x])).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
 
