@@ -137,10 +137,9 @@ dns:
   respect-rules: true
   cache-algorithm: arc
   ipv6: true
-  prefer-h3: true
+  prefer-h3: false
   default-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
     - 1.1.1.1
   fake-ip-filter:
     - Rule-Set:fakeip-filter
