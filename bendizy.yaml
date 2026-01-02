@@ -137,9 +137,7 @@ dns:
   respect-rules: true
   cache-algorithm: arc
   ipv6: true
-  default-nameserver:
-    - 223.5.5.5
-    - 1.1.1.1
+  prefer-h3: true
   fake-ip-filter:
     - Rule-Set:fakeip-filter
     - Rule-Set:cn
@@ -153,18 +151,23 @@ dns:
     - "+.local"
     - "eleparamtool.saelinzi.com"
     - "digitparamtool.saelinzi.com"
+    
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+
   nameserver-policy:
     "Rule-Set:cn":
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
+      - https://223.5.5.5/dns-query
+      - https://1.12.12.12/dns-query
     "Rule-Set:game_cn,steam_cn,种子下载":
-      - https://dns.alidns.com/dns-query
+      - https://223.5.5.5/dns-query
+
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+    - https://8.8.8.8/dns-query
+
 #------------------------------------------------------------------------------
 proxies:
   - {name: ⛔️ 无网, type: reject}
