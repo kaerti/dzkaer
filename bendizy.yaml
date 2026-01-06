@@ -193,7 +193,7 @@ proxy-groups:
     
   - {name: Discord, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/discord.png"}
 
-  - {name: GPT, <<: *AIBY, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gpt.png"}
+  - {name: AI, <<: *AIBY, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gpt.png"}
 
   - {name: TikTok, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/TikTok.png"}
 
@@ -355,8 +355,8 @@ rules:
   - Rule-Set,Apple,Apple
   - Rule-Set,steam,steam
   - Rule-Set,game,steam
-  - Rule-Set,gemini,GPT
-  - Rule-Set,OpenAI,GPT
+  - Rule-Set,gemini,AI
+  - Rule-Set,OpenAI,AI
   - Rule-Set,emby,emby
   - Domain-Suffix,iturrit.com,电报
   - Rule-Set,telegram,电报,no-resolve
