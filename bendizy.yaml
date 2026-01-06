@@ -183,86 +183,74 @@ AIBY: &AIBY {type: select, proxies: [台湾, 日本, 美国, 新加坡, 备用AI
 CNproxy_groups: &CNproxy_groups {type: select, proxies: [🌎 全球直连, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 节点选择]}
 # —————————
 proxy-groups:
-  - {name: 电报, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/telegram.png"}
+  - {name: 电报, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/telegram.png"}
     
-  - {name: 订阅更新, type: select, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gengxin.png", proxies: [🌎 全球直连, 节点选择]}
+  - {name: 订阅更新, type: select, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gengxin.png", proxies: [🌎 全球直连, 节点选择]}
   
-  - {name: Apple, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/Apple.png"}
+  - {name: Apple, <<: *CNproxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/Apple.png"}
     
-  - {name: 微软, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/weiruan.png"}
+  - {name: 微软, <<: *CNproxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/weiruan.png"}
+    
+  - {name: Discord, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/discord.png"}
+
+  - {name: GPT, <<: *AIBY, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gpt.png"}
+
+  - {name: TikTok, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/TikTok.png"}
+
+  - {name: 油管, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/YouTube.png"}
+
+  - {name: Google, <<: *AIBY, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/Google.png"}
+
+  - {name: GoogleFCM, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/fcm.png"}
+    
+  - {name: GitHub, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/github.png"}
+    
+  - {name: app定位, <<: *CNproxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dks.png"}
+
+  - {name: DNS解析, <<: *All, filter: "^(?=.*(香港|澳门|台湾|新加坡|IEPL)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dns.png"}
+
+  - {name: steam, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/steam.png"}
+
+  - {name: bing, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bing.png"}
+
+  - {name: emby, <<: *qtemby, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/emby.png"}
+
+  - {name: speed测速, <<: *CNproxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/speedtext.png"}
+
+  - {name: 代理, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gfw.png"}
+
+  - {name: 漏网之鱼, <<: *proxy_groups, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/match.png"}
    
-#  - {name: Cloudflare, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/icon/cloudflare_.svg"}
-    
-  - {name: Discord, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/discord.png"}
-
-  - {name: GPT, <<: *AIBY, icon: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/icon/gpt.svg"}
-  
-#  - {name: 谷歌Ai, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gemini.png"}
-
-  - {name: TikTok, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/TikTok.png"}
-
-  - {name: 油管, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/youtube.svg"}
-
-#  - {name: 币安, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bian.png"}
-
-  - {name: Google, <<: *AIBY, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/google.svg"}
-
-  - {name: GoogleFCM, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/fcm.png"}
-    
-#  - {name: 微软云, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/weiruanyun.png"}
-    
-  - {name: GitHub, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/github.png"}
-
-#  - {name: Twitter(X), <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/twitter.png"}
-    
-  - {name: app定位, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dks.png"}
-
-  - {name: DNS解析, <<: *All, filter: "^(?=.*(香港|澳门|台湾|新加坡|IEPL)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dns.png"}
-
-  - {name: steam, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/steam.png"}
-
-#  - {name: game, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/game.png"}
-
-  - {name: bing, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bing.png"}
-
-  - {name: emby, <<: *qtemby, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/emby.png"}
-
-  - {name: speed测速, <<: *CNproxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/speedtext.png"}
-
-  - {name: 代理, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gfw.png"}
-
-  - {name: 漏网之鱼, <<: *proxy_groups, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/match.png"}
-   
-  - {name: 广告拦截, proxies: [⛔️ 无网, 🌎 全球直连, REJECT-DROP, PASS], type: select, icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/quguanggao.png"}
+  - {name: 广告拦截, proxies: [⛔️ 无网, 🌎 全球直连, REJECT-DROP, PASS], type: select, icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/quguanggao.png"}
 #----------------------------------------------
 
-  - {name: 香港, <<: *All, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 香港, <<: *All, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong))(?!.*(低倍|X|Google|Pornhub|.cn)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
         
-  - {name: 台湾, <<: *All, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
+  - {name: 台湾, <<: *All, filter: "^(?=.*(台湾|新北|彰化|TW|Taiwan)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/tw%20.png"}
     
-  - {name: 棒子, <<: *All, filter: "^(?=.*(韩国|首尔|韩)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bangzi.png"}
+  - {name: 棒子, <<: *All, filter: "^(?=.*(韩国|首尔|韩)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/bangzi.png"}
     
-  - {name: 日本, <<: *All, filter: "^(?=.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan))(?!.*(低倍|0\\.[1-9]X)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/riben.png"}
+  - {name: 日本, <<: *All, filter: "^(?=.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan))(?!.*(低倍|0\\.[1-9]X)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/riben.png"}
 
-  - {name: 美国, <<: *All, filter: "^(?=.*(美国|US|United States))(?!.*(海外用户|低倍|0\\.[1-9]|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/usa.png"}
+  - {name: 美国, <<: *All, filter: "^(?=.*(美国|US|United States))(?!.*(海外用户|低倍|0\\.[1-9]|0.5)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/usa.png"}
 
-  - {name: 新加坡, <<: *All, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore))(?!.*(低倍|0\\.[1-9]X)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/xinjiapo.png"}
+  - {name: 新加坡, <<: *All, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore))(?!.*(低倍|0\\.[1-9]X)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/xinjiapo.png"}
     
-  - {name: 澳门, <<: *All, filter: "^(?=.*(澳门)).*$", icon: "https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/icon/%E5%A8%B1%E4%B9%90.svg"}
+  - {name: 澳门, <<: *All, filter: "^(?=.*(澳门)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/Custom_OpenClash_Rules/refs/heads/main/icon/%E5%A8%B1%E4%B9%90.svg"}
   
-  - {name: 低倍, <<: *All, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+  - {name: 低倍, <<: *All, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
 
-  - {name: 备用, <<: *All, filter: "^(?=.*(合租)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
+  - {name: 备用, <<: *All, filter: "^(?=.*(合租)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
     
-  - {name: 备用AI, <<: *All, filter: "^(?=.*(IEPLai)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/diyanchi.png"}
+  - {name: 备用AI, <<: *All, filter: "^(?=.*(IEPLai)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/diyanchi.png"}
 
-  - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
+  - {name: 节点选择, <<: *All, filter: "^(?!.*(不不不)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/jiedianxuanze.png"}
 
-  - {name: 香港负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, sticky-sessions: true, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 香港负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, sticky-sessions: true, filter: "^(?=.*(香港|HK|hk|Hong Kong|HongKong|hongkong)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
   
-  - {name: 新加坡负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, sticky-sessions: true, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/hk.png"}
+  - {name: 新加坡负载均衡, <<: *A, type: load-balance, strategy: consistent-hashing, sticky-sessions: true, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/xinjiapo.png"}
 
-  - {name: 低倍负载均衡, <<: *A, type: load-balance, strategy: round-robin, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
+  - {name: 低倍负载均衡, <<: *A, type: load-balance, strategy: round-robin, filter: "^(?=.*(低倍|[0\\.[1-9]]|Emby|0.5)).*$", icon: "https://gh.xppya.cc/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/dibei.png"}
 
 #  - {name: 高级节点, <<: *A, filter: "^(?=.*(iepl|IEPL|(?<!\\.)[[1-9][0-9]*x])).*$", icon: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/icon/gaobei.png"}
 
@@ -276,76 +264,76 @@ rule-anchor:
 rule-providers:    
   WebRTC_端/域: {<<: *RuleDefault, path: ./rules/WebRTC.list, url: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/rules/WebRTC.list"}
   
-  app定位: {<<: *RuleDefault, path: ./rules/app定位.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/meapplocation.list"}
+  app定位: {<<: *RuleDefault, path: ./rules/app定位.list, url: "https://ghproxy.net/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/meapplocation.list"}
   
-  emby: {<<: *RuleDefault, path: ./rules/emby.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/emby.list"}
+  emby: {<<: *RuleDefault, path: ./rules/emby.list, url: "https://ghproxy.net/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/emby.list"}
   
-  反诈: {<<: *RuleDefault, path: ./rules/反诈.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/fanzha.list"}
+  反诈: {<<: *RuleDefault, path: ./rules/反诈.list, url: "https://ghproxy.net/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/fanzha.list"}
 
-  GWdns: {<<: *RuleDefault, path: ./rules/cloudflaredns.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/cloudflaredns.list"}
+  GWdns: {<<: *RuleDefault, path: ./rules/cloudflaredns.list, url: "https://ghproxy.net/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/cloudflaredns.list"}
 
-  cndns: {<<: *RuleDefault, path: ./rules/cndns.list, url: "https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/ip-dns-cn.list"}
+  cndns: {<<: *RuleDefault, path: ./rules/cndns.list, url: "https://ghproxy.net/https://raw.githubusercontent.com/sxppya/--/refs/heads/main/rule/ip-dns-cn.list"}
 
 #——————————————————DOMAIN————————————————————————
 
-  cn: {<<: *Domain, path: ./rules/cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
+  cn: {<<: *Domain, path: ./rules/cn.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
 
-  google: {<<: *Domain, path: ./rules/google.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/google.mrs"}
+  google: {<<: *Domain, path: ./rules/google.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/google.mrs"}
   
-  proxy: {<<: *Domain, path: ./rules/geolocation-!cn.mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
+  proxy: {<<: *Domain, path: ./rules/geolocation-!cn.mrs, url: "https://ghproxy.net/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
 
-  种子下载: {<<: *Domain, path: ./rules/category-public-tracker.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-public-tracker.mrs"}
+  种子下载: {<<: *Domain, path: ./rules/category-public-tracker.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-public-tracker.mrs"}
   
-  fakeip-filter: {<<: *Domain, path: ./rules/fakeip-filter.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"}
+  fakeip-filter: {<<: *Domain, path: ./rules/fakeip-filter.mrs, url: "https://ghproxy.net/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"}
 
-  OpenAI: {<<: *Domain, path: ./rules/openai.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
+  OpenAI: {<<: *Domain, path: ./rules/openai.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
 
-  twitter: {<<: *Domain, path: ./rules/twitter.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitter.mrs"}
+  twitter: {<<: *Domain, path: ./rules/twitter.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitter.mrs"}
   
-  gitHub: {<<: *Domain, path: ./rules/github.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
+  gitHub: {<<: *Domain, path: ./rules/github.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
 
-  Discord: {<<: *Domain, path: ./rules/discord.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/discord.mrs"}
+  Discord: {<<: *Domain, path: ./rules/discord.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/discord.mrs"}
 
-  TikTok: {<<: *Domain, path: ./rules/tiktok.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
+  TikTok: {<<: *Domain, path: ./rules/tiktok.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
    
-  paypal: {<<: *Domain, path: ./rules/paypal.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/paypal.mrs"}
+  paypal: {<<: *Domain, path: ./rules/paypal.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/paypal.mrs"}
 
-  youTube: {<<: *Domain, path: ./rules/youtube.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}
+  youTube: {<<: *Domain, path: ./rules/youtube.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}
 
-  GoogleFCM: {<<: *Domain, path: ./rules/googlefcm.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/googlefcm.mrs"}
+  GoogleFCM: {<<: *Domain, path: ./rules/googlefcm.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/googlefcm.mrs"}
 
-  Apple: {<<: *Domain, path: ./rules/apple.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"}
+  Apple: {<<: *Domain, path: ./rules/apple.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"}
 
-  onedrive: {<<: *Domain, path: ./rules/onedrive.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/onedrive.mrs"}
+  onedrive: {<<: *Domain, path: ./rules/onedrive.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/onedrive.mrs"}
 
-  Microsoft: {<<: *Domain, path: ./rules/microsoft.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
+  Microsoft: {<<: *Domain, path: ./rules/microsoft.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
 
-  Binance: {<<: *Domain, path: ./rules/binance.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
+  Binance: {<<: *Domain, path: ./rules/binance.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
 
-  steam: {<<: *Domain, path: ./rules/steam.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs"}
+  steam: {<<: *Domain, path: ./rules/steam.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs"}
 
-  game: {<<: *Domain, path: ./rules/category-games.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-games.mrs"}
+  game: {<<: *Domain, path: ./rules/category-games.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-games.mrs"}
 
-  bing: {<<: *Domain, path: ./rules/bing.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bing.mrs"}
+  bing: {<<: *Domain, path: ./rules/bing.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bing.mrs"}
 
-  steam_cn: {<<: *Domain, path: ./rules/steam@cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"}
+  steam_cn: {<<: *Domain, path: ./rules/steam@cn.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"}
 
-  game_cn: {<<: *Domain, path: ./rules/category-games@cn.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-games@cn.mrs"}
+  game_cn: {<<: *Domain, path: ./rules/category-games@cn.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-games@cn.mrs"}
 
-  speed测速: {<<: *Domain, path: ./rules/speedtest.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/speedtest.mrs"}
+  speed测速: {<<: *Domain, path: ./rules/speedtest.mrs, url: "https://ghproxy.net/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/speedtest.mrs"}
   
-  gemini: {<<: *Domain, path: ./rules/gemini.mrs, url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/ai.mrs"}
+  gemini: {<<: *Domain, path: ./rules/gemini.mrs, url: "https://ghproxy.net/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/ai.mrs"}
 
-  广告: {<<: *Domain, path: ./rules/mihomo.mrs, url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"}
+  广告: {<<: *Domain, path: ./rules/mihomo.mrs, url: "https://ghproxy.net/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"}
 
 #————————————————IPCIDR——————————————————————————————  
-  privateip: {<<: *IPCIDR, path: ./rules/privateip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"}
+  privateip: {<<: *IPCIDR, path: ./rules/privateip.mrs, url: "https://ghproxy.net/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"}
     
-  telegram: {<<: *IPCIDR, path: ./rules/telegramip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"}
+  telegram: {<<: *IPCIDR, path: ./rules/telegramip.mrs, url: "https://ghproxy.net/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"}
   
 #  googleip: {googleip: {<<: *IPCIDR, path: ./rules/google.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/
     
-  cnip: {<<: *IPCIDR, path: ./rules/cnip.mrs, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.mrs"}
+  cnip: {<<: *IPCIDR, path: ./rules/cnip.mrs, url: "https://ghproxy.net/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.mrs"}
 
 #  twitterip: {<<: *IPCIDR, path: ./rules/twitter.mrs, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta
 
